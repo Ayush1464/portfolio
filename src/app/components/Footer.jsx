@@ -4,11 +4,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative py-12 px-6 border-t border-gray-800/50">
+    <footer className="relative py-12 px-6 border-t border-gray-200 dark:border-gray-800/50">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           
-          <div className="flex items-center gap-2 text-gray-400">
+          <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 font-medium text-sm">
             <span>© {currentYear} Ayush Mahapatra.</span>
             <span className="hidden md:inline">Made with</span>
 
@@ -19,17 +19,17 @@ export default function Footer() {
             </span>
           </div>
 
-          <div className="flex gap-8 text-sm">
-            <a href="#about" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+          <div className="flex gap-8 text-sm font-medium">
+            <a href="#about" className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300">
               About
             </a>
-            <a href="#skills" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+            <a href="#skills" className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300">
               Skills
             </a>
-            <a href="#projects" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+            <a href="#projects" className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300">
               Projects
             </a>
-            <a href="#contact" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+            <a href="#contact" className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300">
               Contact
             </a>
           </div>
@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 text-center">
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-500 dark:text-gray-400 text-sm font-medium">
             Designed & Built by Ayush Mahapatra
           </p>
         </div>

@@ -27,7 +27,7 @@ const LucrativeButton = ({ onClick, label = "Explore My Work" }) => {
     <button
       onMouseMove={handleMouseMove}
       onClick={onClick}
-      className="group relative overflow-hidden px-10 py-5 rounded-2xl bg-slate-950 text-white font-bold border border-white/10 transition-all duration-500 hover:scale-[1.02] hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)]"
+      className="group relative overflow-hidden px-10 py-5 rounded-2xl bg-slate-900 text-white dark:bg-slate-950 font-bold border border-gray-700/50 dark:border-white/10 shadow-lg transition-all duration-500 hover:scale-[1.02] hover:border-purple-500/50 hover:shadow-[0_0_50px_rgba(168,85,247,0.3)]"
     >
       {/* 1. LAYERED BACKGROUND GRADIENT */}
       <span className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,50,255,0.15),transparent_70%)]" />

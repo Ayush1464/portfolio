@@ -73,37 +73,37 @@ export default function Experience() {
 
               {/* Card */}
               <div>
-                <div className="group relative p-6 md:p-8 rounded-2xl bg-gradient-to-br from-blue-500/5 to-purple-500/5 border border-blue-500/10 backdrop-blur-sm hover:border-blue-500/30 transition-all duration-300 hover:shadow-[0_0_40px_rgba(99,102,241,0.2)]">
+                <div className="group relative p-6 md:p-8 rounded-2xl bg-blue-500/5 dark:bg-gradient-to-br dark:from-blue-500/5 dark:to-purple-500/5 border border-blue-500/20 dark:border-blue-500/10 backdrop-blur-sm hover:border-blue-500/40 transition-all duration-300 hover:shadow-[0_0_40px_rgba(99,102,241,0.2)]">
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 p-0.5">
-                      <div className="w-full h-full bg-[#0a0a0f] rounded-xl flex items-center justify-center">
+                      <div className="w-full h-full bg-slate-900 dark:bg-[#0a0a0f] rounded-xl flex items-center justify-center">
                         <Briefcase className="w-6 h-6 text-blue-400" />
                       </div>
                     </div>
 
                     <div className="flex-1">
-                      <h3 className="text-xl md:text-2xl mb-2">
+                      <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
                         {exp.title}
                       </h3>
-                      <p className="text-blue-400 mb-2">
+                      <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">
                         {exp.company}
                       </p>
-                      <p className="flex items-center gap-2 text-gray-400 text-sm">
+                      <p className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
                         <Calendar className="w-4 h-4" />
                         {exp.period}
                       </p>
                     </div>
                   </div>
 
-                  <p className="text-gray-300 mb-4 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed font-normal">
                     {exp.description}
                   </p>
 
                   <div className="space-y-2">
                     {exp.achievements.map((a, i) => (
                       <div key={i} className="flex gap-2">
-                        <div className="w-1.5 h-1.5 mt-2 rounded-full bg-gradient-to-r from-blue-400 to-purple-400"></div>
-                        <p className="text-gray-400 text-sm">{a}</p>
+                        <div className="w-1.5 h-1.5 mt-2 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 flex-shrink-0"></div>
+                        <p className="text-gray-600 dark:text-gray-400 text-sm">{a}</p>
                       </div>
                     ))}
                   </div>

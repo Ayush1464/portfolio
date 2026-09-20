@@ -25,11 +25,13 @@ export default function Hero() {
   };
 
   const textColor =
-    theme === "dark" ? "text-gray-300" : "text-gray-700";
+    theme === "dark" ? "text-gray-200" : "text-gray-800";
   const mutedColor =
     theme === "dark" ? "text-gray-400" : "text-gray-600";
   const borderColor =
-    theme === "dark" ? "border-gray-700" : "border-gray-300";
+    theme === "dark"
+      ? "border-gray-700 hover:border-gray-500 bg-white/5 text-white"
+      : "border-gray-300 hover:border-gray-400 bg-gray-100 text-gray-900";
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
@@ -41,7 +43,7 @@ export default function Hero() {
         transition={{ duration: 1, delay: 0.5 }}
         className="absolute top-1/4 left-10 hidden lg:block"
       >
-        <Code2 className="w-16 h-16 text-gray-500" />
+        <Code2 className="w-16 h-16 text-blue-500" />
       </motion.div>
 
       <motion.div
@@ -50,7 +52,7 @@ export default function Hero() {
         transition={{ duration: 1, delay: 0.7 }}
         className="absolute bottom-1/4 right-10 hidden lg:block"
       >
-        <Sparkles className="w-20 h-20 text-gray-500" />
+        <Sparkles className="w-20 h-20 text-purple-500" />
       </motion.div>
 
       <motion.div
@@ -59,7 +61,7 @@ export default function Hero() {
         transition={{ duration: 1, delay: 0.9 }}
         className="absolute top-1/3 right-1/4 hidden lg:block"
       >
-        <Zap className="w-12 h-12 text-gray-500" />
+        <Zap className="w-12 h-12 text-pink-500" />
       </motion.div>
 
       <div className="max-w-6xl mx-auto text-center relative z-10">
@@ -70,7 +72,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="mb-6"
         >
-          <span className="px-4 py-2 rounded-full border border-blue-500/20">
+          <span className="px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium backdrop-blur-sm">
             ✨ Available for opportunities
           </span>
         </motion.div>
@@ -79,7 +81,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl mb-6"
+          className="text-5xl md:text-7xl lg:text-8xl mb-6 font-extrabold tracking-tight"
         >
           Hi, I'm{" "}
           <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent font-bold">
@@ -91,7 +93,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className={`text-3xl md:text-4xl mb-4 ${textColor}`}
+          className={`text-3xl md:text-4xl mb-4 font-semibold ${textColor}`}
         >
           Frontend Developer
         </motion.p>
@@ -100,7 +102,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className={`text-lg md:text-xl ${mutedColor} mb-12 max-w-2xl mx-auto`}
+          className={`text-lg md:text-xl ${mutedColor} mb-12 max-w-2xl mx-auto leading-relaxed`}
         >
           I build scalable, high-performance web apps with modern technologies.
         </motion.p>
@@ -109,17 +111,17 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           {/* 🔥 Fancy Button */}
-       <LucrativeButton 
+          <LucrativeButton 
             onClick={() => scrollToSection("projects")} 
             label="Explore My Work" 
           />
 
           <button
             onClick={() => scrollToSection("contact")}
-            className={`px-8 py-4 rounded-full border ${borderColor}`}
+            className={`px-8 py-4 rounded-2xl border font-bold transition-all duration-300 hover:scale-[1.02] ${borderColor}`}
           >
             Contact Me
           </button>

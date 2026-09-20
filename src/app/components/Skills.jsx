@@ -74,16 +74,16 @@ export default function Skills() {
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
               className="group relative"
             >
-              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-blue-500/5 to-purple-500/5 border border-blue-500/10 backdrop-blur-sm hover:border-blue-500/30 transition-all duration-300 hover:shadow-[0_0_40px_rgba(99,102,241,0.15)] h-full">
+              <div className="relative p-8 rounded-2xl bg-blue-500/5 dark:bg-gradient-to-br dark:from-blue-500/5 dark:to-purple-500/5 border border-blue-500/20 dark:border-blue-500/10 backdrop-blur-sm hover:border-blue-500/40 transition-all duration-300 hover:shadow-[0_0_40px_rgba(99,102,241,0.15)] h-full">
                 <div
                   className={`w-14 h-14 rounded-xl bg-gradient-to-br ${category.color} p-0.5 mb-6 group-hover:scale-110 transition-transform`}
                 >
-                  <div className="w-full h-full bg-[#0a0a0f] rounded-xl flex items-center justify-center">
+                  <div className="w-full h-full bg-slate-900 dark:bg-[#0a0a0f] rounded-xl flex items-center justify-center">
                     <category.icon className="w-7 h-7 text-white" />
                   </div>
                 </div>
 
-                <h3 className="text-2xl mb-6 flex items-center gap-2">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                   {category.title}
                   <Sparkles className="w-5 h-5 text-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </h3>
@@ -92,14 +92,14 @@ export default function Skills() {
                   {category.skills.map((skill, skillIndex) => (
                     <div key={skillIndex}>
                       <div className="flex justify-between mb-2">
-                        <span className="text-gray-300 text-sm">
+                        <span className="text-gray-700 dark:text-gray-300 text-sm font-medium">
                           {skill.name}
                         </span>
-                        <span className="text-gray-400 text-sm">
+                        <span className="text-gray-500 dark:text-gray-400 text-sm font-semibold">
                           {skill.level}%
                         </span>
                       </div>
-                      <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+                      <div className="h-2.5 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={isInView ? { width: `${skill.level}%` } : {}}
@@ -109,7 +109,7 @@ export default function Skills() {
                           }}
                           className={`h-full bg-gradient-to-r ${category.color} rounded-full relative`}
                         >
-                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse"></div>
                         </motion.div>
                       </div>
                     </div>

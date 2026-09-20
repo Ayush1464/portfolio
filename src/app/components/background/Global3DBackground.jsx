@@ -36,7 +36,7 @@ export default function Global3DBackground() {
   }, [prefersReducedMotion]);
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-35 transition-opacity duration-700">
       <Canvas
         camera={{ position: [0, 0, 5], fov: 45 }}
         dpr={isMobile ? [1, 1.25] : [1, 2]}
